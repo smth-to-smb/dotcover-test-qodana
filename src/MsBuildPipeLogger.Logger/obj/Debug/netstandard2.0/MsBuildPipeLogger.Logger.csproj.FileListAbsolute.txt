@@ -1,0 +1,11 @@
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/bin/Debug/netstandard2.0/MsBuildPipeLogger.Logger.deps.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/bin/Debug/netstandard2.0/MsBuildPipeLogger.Logger.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/bin/Debug/netstandard2.0/MsBuildPipeLogger.Logger.pdb
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.csproj.AssemblyReference.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.GeneratedMSBuildEditorConfig.editorconfig
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.AssemblyInfoInputs.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.AssemblyInfo.cs
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.csproj.CoreCompileInputs.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.sourcelink.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/src/MsBuildPipeLogger.Logger/obj/Debug/netstandard2.0/MsBuildPipeLogger.Logger.pdb

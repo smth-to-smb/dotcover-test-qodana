@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>HelloWorld</id>
+    <version>0.1.0</version>
+    <authors>HelloWorld</authors>
+    <description>Package Description</description>
+    <releaseNotes>https://github.com/xoofx/HelloWorld/releases/tag/9999.0.0</releaseNotes>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" commit="ad2ffd204e6bfc06dacfcb2e32a5f90584336d7d" />
+  </metadata>
+  <files>
+    <file src="/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/DotnetToolSettings.xml" target="tools/net9.0/any/DotnetToolSettings.xml" />
+    <file src="/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/publish/HelloWorld.dll" target="tools/net9.0/any/HelloWorld.dll" />
+    <file src="/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/publish/HelloWorld.runtimeconfig.json" target="tools/net9.0/any/HelloWorld.runtimeconfig.json" />
+    <file src="/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/publish/HelloWorld.pdb" target="tools/net9.0/any/HelloWorld.pdb" />
+    <file src="/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/publish/HelloWorld.deps.json" target="tools/net9.0/any/HelloWorld.deps.json" />
+  </files>
+</package>

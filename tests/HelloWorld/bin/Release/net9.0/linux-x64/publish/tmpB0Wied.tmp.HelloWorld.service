@@ -1,0 +1,12 @@
+[Unit]
+After = network.target
+Description = Package Description
+StartLimitBurst = 4
+StartLimitIntervalSec = 60
+[Install]
+WantedBy = multi-user.target
+[Service]
+ExecStart = /usr/local/bin/HelloWorld /etc/this/is/my/config/file.toml
+Restart = always
+RestartSec = 1
+Type = simple

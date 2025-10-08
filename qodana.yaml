@@ -1,0 +1,9 @@
+version: "1.0"
+
+bootstrap: cp ./coverage.lcov ./.qodana/code-coverage
+
+profile:
+    name: qodana.recommended
+
+
+

@@ -1,0 +1,2 @@
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/linux-x64/publish/tmpB0Wied.tmp.HelloWorld.service
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/linux-x64/publish/HelloWorld

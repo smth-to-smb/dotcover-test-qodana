@@ -1,0 +1,15 @@
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/HelloWorld
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/HelloWorld.deps.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/HelloWorld.runtimeconfig.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/HelloWorld.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/HelloWorld.pdb
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.AssemblyInfoInputs.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.AssemblyInfo.cs
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.csproj.CoreCompileInputs.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.sourcelink.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/refint/HelloWorld.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.pdb
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/HelloWorld.genruntimeconfig.cache
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/obj/Release/net9.0/ref/HelloWorld.dll

@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SolutionRoot CoveredStatements="1109" TotalStatements="5948" CoveragePercent="19" ReportType="Xml" DotCoverVersion="2025.2.2">
+  <Project Name="dotnet-releaser" CoveredStatements="761" TotalStatements="4348" CoveragePercent="18">
+    <Assembly Name="(0.0.0.0, net9.0)" CoveredStatements="761" TotalStatements="4348" CoveragePercent="18">
+      <Namespace Name="DotNetReleaser" CoveredStatements="761" TotalStatements="4102" CoveragePercent="19">
+        <Namespace Name="Changelog" CoveredStatements="240" TotalStatements="302" CoveragePercent="79">
+          <Type Name="ChangelogBuilder" CoveredStatements="15" TotalStatements="51" CoveragePercent="29">
+            <Constructor Name="ChangelogBuilder(ChangelogConfiguration,ISimpleLogger)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            <Method Name="Generate(IDevHosting,string):Task&lt;ChangelogResult&gt;" CoveredStatements="4" TotalStatements="6" CoveragePercent="67">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="4" TotalStatements="6" CoveragePercent="67" />
+            </Method>
+            <Method Name="GenerateFromExistingChangelog(IDevHosting,string):Task&lt;ChangelogResult&gt;" CoveredStatements="0" TotalStatements="33" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="33" CoveragePercent="0" />
+            </Method>
+            <Method Name="GenerateFromPullRequestsAndCommits(IDevHosting,string):Task&lt;ChangelogResult&gt;" CoveredStatements="6" TotalStatements="7" CoveragePercent="86">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="7" CoveragePercent="86" />
+            </Method>
+          </Type>
+          <Type Name="ChangelogChangeModel" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <Constructor Name="ChangelogChangeModel(string,string,string)" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogCollection" CoveredStatements="14" TotalStatements="14" CoveragePercent="100">
+            <Constructor Name="ChangelogCollection()" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+            <Method Name="AddCommitChange(string,string,string,string):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <Method Name="AddPullRequestChange(int,string,string,string,string,string[],string[]):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogCommitChangeModel" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+            <Constructor Name="ChangelogCommitChangeModel(string,string,string,string)" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Property Name="Sha:string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+              <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Property>
+          </Type>
+          <Type Name="ChangelogPullRequestChangeModel" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <Constructor Name="ChangelogPullRequestChangeModel(int,string,string,string,string,string[],string[])" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogResult" CoveredStatements="1" TotalStatements="4" CoveragePercent="25">
+            <Constructor Name="ChangelogResult(string,string)" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="ChangelogTemplatizer" CoveredStatements="198" TotalStatements="216" CoveragePercent="92">
+            <Constructor Name="ChangelogTemplatizer(ChangelogConfiguration,ISimpleLogger)" CoveredStatements="12" TotalStatements="12" CoveragePercent="100" />
+            <Method Name="CompileScribanTemplate(string,string):Template" CoveredStatements="19" TotalStatements="19" CoveragePercent="100" />
+            <Method Name="DispatchPullRequestAndCommitChangesToCategories(ChangelogCollection):void" CoveredStatements="88" TotalStatements="98" CoveragePercent="90">
+              <OwnCoverage CoveredStatements="80" TotalStatements="87" CoveragePercent="92" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+                <OwnCoverage CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+                <OwnCoverage CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+                <OwnCoverage CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              </AnonymousMethod>
+            </Method>
+            <Method Name="EqualsIgnoreCase(string,string):bool" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <Method Name="FindCategoryFromLabel(string):ChangelogCategory" CoveredStatements="13" TotalStatements="17" CoveragePercent="76">
+              <OwnCoverage CoveredStatements="12" TotalStatements="15" CoveragePercent="80" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Method>
+            <Method Name="Generate(ChangelogCollection):ChangelogResult" CoveredStatements="16" TotalStatements="18" CoveragePercent="89" />
+            <Method Name="GenerateChanges():string" CoveredStatements="37" TotalStatements="39" CoveragePercent="95">
+              <OwnCoverage CoveredStatements="36" TotalStatements="38" CoveragePercent="95" />
+              <AnonymousMethod Name="(ChangelogCategory):int" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Method>
+            <Method Name="IsFromOwner(ChangelogChangeModel):bool" CoveredStatements="2" TotalStatements="2" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Method>
+            <Method Name="SafeRender(Template,object,string):string" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogVersionModel" CoveredStatements="8" TotalStatements="13" CoveragePercent="62">
+            <Constructor Name="ChangelogVersionModel(string,NuGetVersion,string)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+            <Constructor Name="ChangelogVersionModel()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Property Name="HasVersion:bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+              <PropertyGetter CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Property>
+            <Property Name="Major:int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Property Name="Minor:int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Property Name="Patch:int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Property Name="Revision:int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+        </Namespace>
+        <Namespace Name="Configuration" CoveredStatements="125" TotalStatements="385" CoveragePercent="32">
+          <Type Name="BrewPublisher" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="BrewPublisher()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="ChangelogAutolabeler" CoveredStatements="27" TotalStatements="30" CoveragePercent="90">
+            <Constructor Name="ChangelogAutolabeler()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Constructor Name="ChangelogAutolabeler(string)" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+            <Method Name="AppendBody(params string[]):ChangelogAutolabeler" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="AppendBranch(params string[]):ChangelogAutolabeler" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="AppendFiles(params string[]):ChangelogAutolabeler" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="AppendTitle(params string[]):ChangelogAutolabeler" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="Compile(ISimpleLogger):ChangelogAutolabelerCompiled" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogAutolabelerCompiled" CoveredStatements="22" TotalStatements="22" CoveragePercent="100">
+            <Constructor Name="ChangelogAutolabelerCompiled(string)" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+            <Method Name="Match(ChangelogPullRequestChangeModel):bool" CoveredStatements="9" TotalStatements="9" CoveragePercent="100" />
+            <Method Name="Match(ChangelogCommitChangeModel):bool" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogCategory" CoveredStatements="7" TotalStatements="13" CoveragePercent="54">
+            <Constructor Name="ChangelogCategory()" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Constructor Name="ChangelogCategory(int,string,params string[])" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+          </Type>
+          <Type Name="ChangelogConfiguration" CoveredStatements="46" TotalStatements="47" CoveragePercent="98">
+            <Constructor Name="ChangelogConfiguration()" CoveredStatements="19" TotalStatements="19" CoveragePercent="100" />
+            <Method Name="AddDefaults():void" CoveredStatements="27" TotalStatements="28" CoveragePercent="96" />
+          </Type>
+          <Type Name="ChangelogFilter" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+            <Constructor Name="ChangelogFilter()" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+          </Type>
+          <Type Name="ConfigurationBase" CoveredStatements="4" TotalStatements="7" CoveragePercent="57">
+            <Constructor Name="ConfigurationBase()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="CoverageConfiguration" CoveredStatements="0" TotalStatements="25" CoveragePercent="0">
+            <Constructor Name="CoverageConfiguration()" CoveredStatements="0" TotalStatements="19" CoveragePercent="0" />
+            <Method Name="AddDefaults():void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          </Type>
+          <Type Name="CoverallsConfiguration" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="CoverallsConfiguration()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="DebianConfiguration" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="DebianConfiguration()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="DevHostingConfiguration" CoveredStatements="9" TotalStatements="20" CoveragePercent="45">
+            <Constructor Name="DevHostingConfiguration()" CoveredStatements="9" TotalStatements="9" CoveragePercent="100" />
+            <Method Name="AddDefaults():void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Method Name="GetReleaseNotesUrl(string):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="GetUrl():string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="GitHubDevHostingConfiguration" CoveredStatements="5" TotalStatements="6" CoveragePercent="83">
+            <Constructor Name="GitHubDevHostingConfiguration()" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            <Property Name="Provider:string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+          </Type>
+          <Type Name="MSBuildConfiguration" CoveredStatements="0" TotalStatements="11" CoveragePercent="0">
+            <Constructor Name="MSBuildConfiguration()" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="NuGetPublisher" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+            <Constructor Name="NuGetPublisher()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="PackageDependency" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="PackageDependency()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="PackagingConfiguration" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+            <Constructor Name="PackagingConfiguration()" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="ToStringRidAndKinds(List&lt;string&gt;,List&lt;PackageKind&gt;):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+          <Type Name="RegexReplacer" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="RegexReplacer()" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Run(string):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+          <Type Name="ReleaserConfiguration" CoveredStatements="0" TotalStatements="131" CoveragePercent="0">
+            <Constructor Name="ReleaserConfiguration()" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+            <Property Name="ConfigurationFolder:string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Method Name="AddPackages(List&lt;PackagingConfiguration&gt;,ISimpleLogger):void" CoveredStatements="0" TotalStatements="30" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="29" CoveragePercent="0" />
+              <AnonymousMethod Name="(PackagingConfiguration):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="From(string,ISimpleLogger):Task&lt;ReleaserConfiguration&gt;" CoveredStatements="0" TotalStatements="37" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="37" CoveragePercent="0" />
+            </Method>
+            <Method Name="Initialize(string,ISimpleLogger):bool" CoveredStatements="0" TotalStatements="45" CoveragePercent="0" />
+          </Type>
+          <Type Name="RpmConfiguration" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="RpmConfiguration()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="ScoopPublisher" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="ScoopPublisher()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="ServiceConfiguration" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+            <Type Name="SystemdConfiguration" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <Constructor Name="SystemdConfiguration()" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+            </Type>
+            <Constructor Name="ServiceConfiguration()" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          </Type>
+          <Type Name="TestConfiguration" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="TestConfiguration()" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          </Type>
+        </Namespace>
+        <Namespace Name="Coverage" CoveredStatements="283" TotalStatements="551" CoveragePercent="51">
+          <Namespace Name="Coveralls" CoveredStatements="112" TotalStatements="164" CoveragePercent="68">
+            <Type Name="CoverallsData" CoveredStatements="0" TotalStatements="31" CoveragePercent="0">
+              <Type Name="JsonConverterNullableInt" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+                <Property Name="HandleNull:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+                  <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                </Property>
+                <Method Name="Read(ref Utf8JsonReader,Type,JsonSerializerOptions):Nullable&lt;int&gt;" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+                <Method Name="Write(Utf8JsonWriter,Nullable&lt;int&gt;,JsonSerializerOptions):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              </Type>
+              <Constructor Name="CoverallsData()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Constructor Name="CoverallsData(string,string)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+              <Constructor Name="CoverallsData()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <Method Name="ToJson():string" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            </Type>
+            <Type Name="CoverallsHelper" CoveredStatements="107" TotalStatements="124" CoveragePercent="86">
+              <Type Name="MapFileCoverage" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+                <Constructor Name="MapFileCoverage(string)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+              </Type>
+              <Method Name="ConvertToCoverallsSourceFiles(ISimpleLogger,List&lt;AssemblyCoverage&gt;,string):List&lt;CoverallsSourceFileData&gt;" CoveredStatements="101" TotalStatements="118" CoveragePercent="86">
+                <OwnCoverage CoveredStatements="97" TotalStatements="114" CoveragePercent="85" />
+                <AnonymousMethod Name="(LineCoverage):int" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(BranchCoverage):int" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(BranchCoverage):int" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+                <AnonymousMethod Name="(BranchCoverage):int" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              </Method>
+            </Type>
+            <Type Name="CoverallsSourceFileData" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+              <Constructor Name="CoverallsSourceFileData(string,string)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            </Type>
+            <Type Name="GitData" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+              <Constructor Name="GitData()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            </Type>
+          </Namespace>
+          <Type Name="AssemblyCoverage" CoveredStatements="8" TotalStatements="182" CoveragePercent="4">
+            <Type Name="MapAssemblies" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+              <Method Name="ToAssemblyCoverageList():List&lt;AssemblyCoverage&gt;" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+                <AnonymousMethod Name="(MapAssemblyCoverage):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+            <Type Name="MapAssemblyCoverage" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+              <Constructor Name="MapAssemblyCoverage(string)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+              <Method Name="ToAssemblyCoverage():AssemblyCoverage" CoveredStatements="0" TotalStatements="12" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+                <AnonymousMethod Name="(MapFileCoverage):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+            <Type Name="MapClassCoverage" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+              <Constructor Name="MapClassCoverage(string)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+              <Method Name="ToClassCoverage():ClassCoverage" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+                <AnonymousMethod Name="(MethodCoverage):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(MethodCoverage):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+            <Type Name="MapFileCoverage" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+              <Constructor Name="MapFileCoverage(string)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+              <Method Name="ToFileCoverage():FileCoverage" CoveredStatements="0" TotalStatements="12" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+                <AnonymousMethod Name="(MapClassCoverage):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+            <Type Name="MapMethodCoverage" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+              <Constructor Name="MapMethodCoverage(MethodSignature)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+              <Method Name="ToMethodCoverage():MethodCoverage" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+                <AnonymousMethod Name="(KeyValuePair&lt;int,LineCoverage&gt;):int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(KeyValuePair&lt;int,LineCoverage&gt;):LineCoverage" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(KeyValuePair&lt;BranchCoverageKey,BranchCoverage&gt;):BranchCoverageKey" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(KeyValuePair&lt;BranchCoverageKey,BranchCoverage&gt;):BranchCoverage" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+            <Constructor Name="AssemblyCoverage(string)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            <Method Name="Merge(IEnumerable&lt;AssemblyCoverage&gt;):List&lt;AssemblyCoverage&gt;" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            <Method Name="Merge(IEnumerable&lt;FileCoverage&gt;,MapAssemblyCoverage):void" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+            <Method Name="Merge(IEnumerable&lt;ClassCoverage&gt;,MapFileCoverage):void" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+            <Method Name="Merge(IEnumerable&lt;MethodCoverage&gt;,MapClassCoverage):void" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            <Method Name="Merge(IEnumerable&lt;LineCoverage&gt;,MapMethodCoverage):void" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            <Method Name="Merge(IEnumerable&lt;BranchCoverage&gt;,MapMethodCoverage):void" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+            <Method Name="UpdateCoverage():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="BranchCoverageKey" CoveredStatements="0" TotalStatements="26" CoveragePercent="0">
+            <Method Name="CompareTo(BranchCoverageKey):int" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="CompareTo(object):int" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="op_GreaterThan(BranchCoverageKey,BranchCoverageKey):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="op_GreaterThanOrEqual(BranchCoverageKey,BranchCoverageKey):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="op_LessThan(BranchCoverageKey,BranchCoverageKey):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="op_LessThanOrEqual(BranchCoverageKey,BranchCoverageKey):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="ClassCoverage" CoveredStatements="10" TotalStatements="10" CoveragePercent="100">
+            <Constructor Name="ClassCoverage(string)" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+            <Method Name="UpdateCoverage():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="CoverageBase" CoveredStatements="21" TotalStatements="21" CoveragePercent="100">
+            <Constructor Name="CoverageBase()" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <Method Name="UpdateCoverageFromList&lt;T&gt;(IEnumerable&lt;T&gt;):void" CoveredStatements="18" TotalStatements="18" CoveragePercent="100" />
+          </Type>
+          <Type Name="CoverletJsonParser" CoveredStatements="87" TotalStatements="99" CoveragePercent="88">
+            <Type Name="Method" CoveredStatements="5" TotalStatements="5" CoveragePercent="100">
+              <Constructor Name="Method()" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            </Type>
+            <Constructor Name="CoverletJsonParser()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Method Name="Parse(Stream):List&lt;AssemblyCoverage&gt;" CoveredStatements="23" TotalStatements="33" CoveragePercent="70" />
+            <Method Name="ParseAssemblyCoverage(string,Documents):AssemblyCoverage" CoveredStatements="12" TotalStatements="12" CoveragePercent="100" />
+            <Method Name="ParseClassCoverage(string,Methods):ClassCoverage" CoveredStatements="11" TotalStatements="11" CoveragePercent="100" />
+            <Method Name="ParseFileCoverage(string,Classes):FileCoverage" CoveredStatements="11" TotalStatements="11" CoveragePercent="100" />
+            <Method Name="ParseMethodCoverage(string,Method):MethodCoverage" CoveredStatements="24" TotalStatements="26" CoveragePercent="92" />
+          </Type>
+          <Type Name="FileCoverage" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+            <Constructor Name="FileCoverage(string)" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+            <Method Name="UpdateCoverage():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="HitCoverage" CoveredStatements="3" TotalStatements="7" CoveragePercent="43">
+            <Property Name="Rate:Decimal" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Method Name="Add(HitCoverage):HitCoverage" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="op_Addition(HitCoverage,HitCoverage):HitCoverage" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Type>
+          <Type Name="MethodCoverage" CoveredStatements="33" TotalStatements="33" CoveragePercent="100">
+            <Constructor Name="MethodCoverage(MethodSignature)" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+            <Method Name="UpdateCoverage():void" CoveredStatements="27" TotalStatements="27" CoveragePercent="100" />
+          </Type>
+          <Type Name="MethodSignature" CoveredStatements="1" TotalStatements="1" CoveragePercent="100">
+            <Constructor Name="MethodSignature(string,string,string)" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          </Type>
+        </Namespace>
+        <Namespace Name="DevHosting" CoveredStatements="0" TotalStatements="471" CoveragePercent="0">
+          <Type Name="GitHubDevHosting" CoveredStatements="0" TotalStatements="471" CoveragePercent="0">
+            <Constructor Name="GitHubDevHosting(ISimpleLogger,DevHostingConfiguration,string,string,string)" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+            <Constructor Name="GitHubDevHosting()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Property Name="ApiToken:string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Property Name="Client:GitHubClient" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Method Name="Connect():Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="18" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+            </Method>
+            <Method Name="CreateOrUpdateGist(string,string,string):Task" CoveredStatements="0" TotalStatements="27" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="27" CoveragePercent="0" />
+            </Method>
+            <Method Name="CreateOrUpdateRelease(string,string,ReleaseVersion,ChangelogResult):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            </Method>
+            <Method Name="CreateOrUpdateReleaseImpl(string,string,ReleaseVersion,ChangelogResult):Task&lt;Release&gt;" CoveredStatements="0" TotalStatements="52" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="52" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetAllReleaseTags(string,string,string):Task&lt;List&lt;ReleaseVersion&gt;&gt;" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+                <AnonymousMethod Name="(Release):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+            <Method Name="GetAllReleaseTagsImpl(string,string,string):Task&lt;List&lt;ValueTuple&lt;RepositoryTag,NuGetVersion&gt;&gt;&gt;" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+                <AnonymousMethod Name="(ValueTuple&lt;RepositoryTag,NuGetVersion&gt;):NuGetVersion" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+            <Method Name="GetBranchNamesForCommit(string,string,string):Task&lt;List&lt;string&gt;&gt;" CoveredStatements="0" TotalStatements="30" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="30" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetChanges(string,string,string,string):Task&lt;ChangelogCollection&gt;" CoveredStatements="0" TotalStatements="139" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="139" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="130" CoveragePercent="0" />
+                <AnonymousMethod Name="(ValueTuple&lt;RepositoryTag,NuGetVersion&gt;):NuGetVersion" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(NuGetVersion):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(ValueTuple&lt;RepositoryTag,NuGetVersion&gt;):NuGetVersion" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(ValueTuple&lt;RepositoryTag,NuGetVersion&gt;):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(ValueTuple&lt;RepositoryTag,NuGetVersion&gt;):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(GitHubCommit):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(GitHubCommitFile):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(Label):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(GitHubCommit):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+            <Method Name="GetCompareUrl(string,string,string,string):string" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="GetDownloadReleaseUrl(string,string):string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="GetTitle(string):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="UpdateChangelogAndUploadPackages(string,string,ReleaseVersion,ChangelogResult,List&lt;AppPackageInfo&gt;,bool,bool):Task" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="56" CoveragePercent="0" />
+                <AnonymousMethod Name="(ReleaseAsset):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(ReleaseAsset):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+            <Method Name="UploadHomebrewFormula(string,string,ProjectPackageInfo,string):Task" CoveredStatements="0" TotalStatements="48" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="48" CoveragePercent="0" />
+            </Method>
+            <Method Name="UploadScoopManifest(string,string,ProjectPackageInfo,string):Task" CoveredStatements="0" TotalStatements="38" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="38" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="37" CoveragePercent="0" />
+                <AnonymousMethod Name="(RepositoryContent):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+          </Type>
+        </Namespace>
+        <Namespace Name="Helpers" CoveredStatements="111" TotalStatements="273" CoveragePercent="41">
+          <Type Name="CompressionHelper" CoveredStatements="0" TotalStatements="35" CoveragePercent="0">
+            <Method Name="MakeTarGz(ProjectPackageInfo,string,string,string):string" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+            <Method Name="MakeZip(ProjectPackageInfo,string,string,string):string" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+          </Type>
+          <Type Name="GitHubActionHelper" CoveredStatements="0" TotalStatements="35" CoveragePercent="0">
+            <Constructor Name="GitHubActionHelper()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="GetInfo():GitHubActionInfo" CoveredStatements="0" TotalStatements="34" CoveragePercent="0" />
+          </Type>
+          <Type Name="GitHubActionInfo" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+            <Constructor Name="GitHubActionInfo(string,string,string,string,GitHubActionRefType,Dictionary&lt;string,object&gt;)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="GlobHelper" CoveredStatements="23" TotalStatements="29" CoveragePercent="79">
+            <Method Name="Compile(string,string,ISimpleLogger):Glob" CoveredStatements="6" TotalStatements="12" CoveragePercent="50" />
+            <Method Name="Compile(IEnumerable&lt;string&gt;,string,ISimpleLogger):List&lt;Glob&gt;" CoveredStatements="13" TotalStatements="13" CoveragePercent="100" />
+            <Method Name="IsMatch(IEnumerable&lt;Glob&gt;,string):bool" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(Glob):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Method>
+          </Type>
+          <Type Name="GzipCompressingHandler" CoveredStatements="0" TotalStatements="32" CoveragePercent="0">
+            <Type Name="GzipContent" CoveredStatements="0" TotalStatements="20" CoveragePercent="0">
+              <Constructor Name="GzipContent(HttpContent)" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+              <Method Name="SerializeToStreamAsync(Stream,TransportContext):Task" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+                <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+              </Method>
+              <Method Name="TryComputeLength(out long):bool" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            </Type>
+            <Constructor Name="GzipCompressingHandler(HttpMessageHandler)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="SendAsync(HttpRequestMessage,CancellationToken):Task&lt;HttpResponseMessage&gt;" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+          </Type>
+          <Type Name="JsonHelper" CoveredStatements="35" TotalStatements="60" CoveragePercent="58">
+            <Constructor Name="JsonHelper()" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            <Method Name="ConvertFromJson(JsonElement):object" CoveredStatements="24" TotalStatements="45" CoveragePercent="53" />
+            <Method Name="FromFile(string):object" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="FromStream(Stream):object" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            <Method Name="FromString(string):object" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          </Type>
+          <Type Name="LicenseHelper" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+            <Constructor Name="LicenseHelper()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="IsKnownLicense(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="IsLicenseDefined(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+          <Type Name="RegexHelper" CoveredStatements="28" TotalStatements="30" CoveragePercent="93">
+            <Constructor Name="RegexHelper()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="Compile(string,string,ISimpleLogger):Regex" CoveredStatements="11" TotalStatements="12" CoveragePercent="92" />
+            <Method Name="Compile(IEnumerable&lt;string&gt;,string,ISimpleLogger):List&lt;Regex&gt;" CoveredStatements="13" TotalStatements="13" CoveragePercent="100" />
+            <Method Name="IsMatch(IEnumerable&lt;Regex&gt;,string):bool" CoveredStatements="4" TotalStatements="4" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(Regex):bool" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </Method>
+          </Type>
+          <Type Name="RubyHelper" CoveredStatements="25" TotalStatements="25" CoveragePercent="100">
+            <Method Name="GetRubyClassNameFromAppName(string):string" CoveredStatements="25" TotalStatements="25" CoveragePercent="100" />
+          </Type>
+          <Type Name="StringHelper" CoveredStatements="0" TotalStatements="20" CoveragePercent="0">
+            <Method Name="CountNewLines(string):int" CoveredStatements="0" TotalStatements="20" CoveragePercent="0" />
+          </Type>
+        </Namespace>
+        <Namespace Name="Logging" CoveredStatements="2" TotalStatements="61" CoveragePercent="3">
+          <Type Name="AnsiConsoleOutputOverride" CoveredStatements="0" TotalStatements="11" CoveragePercent="0">
+            <Constructor Name="AnsiConsoleOutputOverride(IAnsiConsoleOutput)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Property Name="IsTerminal:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Property Name="Writer:TextWriter" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+            <Method Name="SetEncoding(Encoding):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="SimpleLogger" CoveredStatements="0" TotalStatements="42" CoveragePercent="0">
+            <Type Name="SimpleLoggerRedirect" CoveredStatements="0" TotalStatements="39" CoveragePercent="0">
+              <Constructor Name="SimpleLoggerRedirect(ILogger)" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+              <Constructor Name="SimpleLoggerRedirect()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <Method Name="LogEndGroup():void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+              <Method Name="LogSimple(LogLevel,Exception,string,bool,params object[]):void" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+              <Method Name="LogStartGroup(string):void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+            </Type>
+            <Method Name="CreateConsoleLogger(ILoggerFactory,string):ISimpleLogger" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="SimpleLoggerExtensions" CoveredStatements="2" TotalStatements="8" CoveragePercent="25">
+            <Method Name="Debug(ISimpleLogger,string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="Error(ISimpleLogger,string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Method Name="ErrorMarkup(ISimpleLogger,string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="Info(ISimpleLogger,string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="InfoMarkup(ISimpleLogger,string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="InfoMarkup(ISimpleLogger,string,params IRenderable[]):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="Warn(ISimpleLogger,string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            <Method Name="WarnMarkup(ISimpleLogger,string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+        </Namespace>
+        <Namespace Name="Runners" CoveredStatements="0" TotalStatements="179" CoveragePercent="0">
+          <Type Name="CommandResulExtended" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+            <Constructor Name="CommandResulExtended(CommandResult,string,string)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Property Name="HasErrors:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+              <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Property>
+          </Type>
+          <Type Name="DotNetRunner" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="DotNetRunner(string)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Run():Task&lt;CommandResulExtended&gt;" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            </Method>
+          </Type>
+          <Type Name="DotNetRunnerBase" CoveredStatements="0" TotalStatements="61" CoveragePercent="0">
+            <Constructor Name="DotNetRunnerBase(string)" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <Method Name="ComputeArguments():IEnumerable&lt;string&gt;" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="ComputeProperties():IReadOnlyDictionary&lt;string,object&gt;" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <Method Name="Dispose(bool):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Dispose():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="GetFullArguments(string,IEnumerable&lt;string&gt;,IReadOnlyDictionary&lt;string,object&gt;):string" CoveredStatements="0" TotalStatements="22" CoveragePercent="0" />
+            <Method Name="GetPropertyValueAsString(object):string" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <Method Name="Run(string,IEnumerable&lt;string&gt;,IReadOnlyDictionary&lt;string,object&gt;,string):Task&lt;CommandResulExtended&gt;" CoveredStatements="0" TotalStatements="8" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+            </Method>
+            <Method Name="RunImpl():Task&lt;CommandResulExtended&gt;" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            </Method>
+            <Method Name="ToDebuggerDisplay():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="GitRunner" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+            <Method Name="Run(string,IEnumerable&lt;string&gt;,string):Task&lt;CommandResulExtended&gt;" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            </Method>
+          </Type>
+          <Type Name="MSBuildResult" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <Constructor Name="MSBuildResult(CommandResult,string,string,Dictionary&lt;string,List&lt;ITaskItem&gt;&gt;)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Type>
+          <Type Name="MSBuildRunner" CoveredStatements="0" TotalStatements="93" CoveragePercent="0">
+            <Constructor Name="MSBuildRunner()" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <Method Name="ComputeArguments():IEnumerable&lt;string&gt;" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            <Method Name="ComputeProperties():IReadOnlyDictionary&lt;string,object&gt;" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+            <Method Name="Run(ISimpleLogger):Task&lt;MSBuildResult&gt;" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+              <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="58" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="28" CoveragePercent="0" />
+                <AnonymousMethod Name="(object,BuildWarningEventArgs):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+                <AnonymousMethod Name="(object,BuildErrorEventArgs):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+                <AnonymousMethod Name="(object,TargetFinishedEventArgs):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+                <AnonymousMethod Name="():void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+                  <OwnCoverage CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+                  <AnonymousMethod Name="():void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+                </AnonymousMethod>
+                <AnonymousMethod Name="():void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+              </InternalCompiledMethod>
+            </Method>
+          </Type>
+        </Namespace>
+        <Type Name="AppPackageInfo" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+          <Constructor Name="AppPackageInfo(string,PackageKind,string,string,string,string,bool)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="GetFileSize():long" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="BuildInformation" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+          <Constructor Name="BuildInformation(ProjectPackageInfoCollection[])" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="GetAllPackableProjects():List&lt;ProjectPackageInfo&gt;" CoveredStatements="0" TotalStatements="5" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <AnonymousMethod Name="(ProjectPackageInfoCollection):IEnumerable&lt;ProjectPackageInfo&gt;" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(ProjectPackageInfo):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="GetOrCreateBuildPackageInformation(ProjectPackageInfo):BuildPackageInformation" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+        </Type>
+        <Type Name="BuildPackageInformation" CoveredStatements="0" TotalStatements="5" CoveragePercent="0">
+          <Constructor Name="BuildPackageInformation()" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+        </Type>
+        <Type Name="GitInformation" CoveredStatements="0" TotalStatements="40" CoveragePercent="0">
+          <Constructor Name="GitInformation(Repository,Branch,string)" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          <Method Name="Create(ISimpleLogger,string,List&lt;string&gt;):GitInformation" CoveredStatements="0" TotalStatements="21" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+            <AnonymousMethod Name="(Branch):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(Branch):ValueTuple&lt;Branch,string&gt;" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(ValueTuple&lt;Branch,string&gt;):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(Branch):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(ValueTuple&lt;Branch,string&gt;):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="GetShortBranchName(Branch):string" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+        </Type>
+        <Type Name="ProjectPackageInfo" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+          <Constructor Name="ProjectPackageInfo(string,string,string,PackageOutputType,string,string,string,string,bool,bool,string[],TargetFrameworkInfo)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="ProjectPackageInfoCollection" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+          <Constructor Name="ProjectPackageInfoCollection(ProjectPackageInfo[],string)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="ReleaserApp" CoveredStatements="0" TotalStatements="1807" CoveragePercent="0">
+          <Type Name="AppException" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+            <Constructor Name="AppException(string)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Constructor Name="ReleaserApp(ISimpleLogger)" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+          <Constructor Name="ReleaserApp()" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+          <Property Name="HasErrors:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Method Name="AddCoverageSetting(List&lt;string&gt;,string,bool):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="AddCoverageSetting(List&lt;string&gt;,string,List&lt;string&gt;):void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="AddSection(StringWriter,string,IDictionary&lt;string,object&gt;):void" CoveredStatements="0" TotalStatements="30" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="29" CoveragePercent="0" />
+            <AnonymousMethod Name="(KeyValuePair&lt;string,object&gt;):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="Build(string,bool):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="28" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="28" CoveragePercent="0" />
+          </Method>
+          <Method Name="BuildAndTest(IDevHosting,BuildInformation):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="79" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="79" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="77" CoveragePercent="0" />
+              <AnonymousMethod Name="(ProjectPackageInfo):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ProjectPackageInfo):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="BuildAppPackages(BuildInformation):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+          </Method>
+          <Method Name="BuildAppPackages(BuildInformation,ProjectPackageInfo):Task&lt;List&lt;AppPackageInfo&gt;&gt;" CoveredStatements="0" TotalStatements="61" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="61" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="59" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(PackageKind):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="BuildNuGetPackage(BuildInformation):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="33" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="33" CoveragePercent="0" />
+          </Method>
+          <Method Name="BuildNuGetPackageImpl(BuildInformation,ProjectPackageInfo):Task&lt;List&lt;string&gt;&gt;" CoveredStatements="0" TotalStatements="49" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="49" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="48" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="Configuring(string,BuildKind,string,string,string,string,bool,string):Task&lt;Nullable&lt;ValueTuple&lt;BuildInformation,IDevHosting,IDevHosting&gt;&gt;&gt;" CoveredStatements="0" TotalStatements="130" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="130" CoveragePercent="0" />
+          </Method>
+          <Method Name="ConnectToDevHosting(DevHostingConfiguration,string,string,string):Task&lt;IDevHosting&gt;" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          </Method>
+          <Method Name="CopyToArtifacts(string):string" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="CreateChangeLog(IDevHosting,string):Task&lt;ChangelogResult&gt;" CoveredStatements="0" TotalStatements="5" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          </Method>
+          <Method Name="CreateConfigurationFile(string,string,string,string,bool):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="64" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="64" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="62" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="CreateFormula(IDevHosting,BuildInformation,ProjectPackageInfo,List&lt;AppPackageInfo&gt;):string" CoveredStatements="0" TotalStatements="28" CoveragePercent="0" />
+          <Method Name="CreateScoopManifest(IDevHosting,BuildInformation,ProjectPackageInfo,List&lt;AppPackageInfo&gt;):string" CoveredStatements="0" TotalStatements="39" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="38" CoveragePercent="0" />
+            <AnonymousMethod Name="(ValueTuple&lt;AppPackageInfo,string&gt;):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="CreateSystemdServiceFile(ProjectPackageInfo):Task&lt;string&gt;" CoveredStatements="0" TotalStatements="41" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="41" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="40" CoveragePercent="0" />
+              <AnonymousMethod Name="(KeyValuePair&lt;string,IDictionary&lt;string,object&gt;&gt;):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="DisplayAllProjects(List&lt;ProjectPackageInfoCollection&gt;):void" CoveredStatements="0" TotalStatements="60" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="58" CoveragePercent="0" />
+            <AnonymousMethod Name="(ProjectPackageInfoCollection):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <AnonymousMethod Name="(object):IRenderable" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="EnsureArtifactsFolders(bool):bool" CoveredStatements="0" TotalStatements="26" CoveragePercent="0" />
+          <Method Name="EnsureCoverageFolder():string" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+          <Method Name="Error(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="EscapeRuby(string):string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="FormatRate(HitCoverage):string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="FormatRidAndKind(string,PackageKind):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="GetBrewCpuCheck(string):string" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+          <Method Name="GetCoverageFolder():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="GetScoopArchitecture(string):string" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Method Name="GetTableBorderFromKind(TableBorderKind):TableBorder" CoveredStatements="0" TotalStatements="22" CoveragePercent="0" />
+          <Method Name="GetTargetFrameworks(string):Task&lt;TargetFrameworkInfo&gt;" CoveredStatements="0" TotalStatements="44" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="44" CoveragePercent="0" />
+          </Method>
+          <Method Name="Info(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Info(string,IRenderable):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="ListOrUpdateChangelog(string,string,string,bool):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="9" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+          </Method>
+          <Method Name="ListOrUpdateChangelog(IDevHosting,string,bool):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="43" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="43" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="42" CoveragePercent="0" />
+              <AnonymousMethod Name="(ReleaseVersion):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="LoadAndDisplayCoverageResults():HitCoverage" CoveredStatements="0" TotalStatements="40" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="39" CoveragePercent="0" />
+            <AnonymousMethod Name="(object):IRenderable" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="LoadConfiguration(string):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          </Method>
+          <Method Name="LoadCoverageResults():void" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+          <Method Name="LoadPackageInfo(string,TargetFrameworkInfo):Task&lt;ProjectPackageInfo&gt;" CoveredStatements="0" TotalStatements="55" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="55" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="44" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(ITaskItem):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="LoadProjects():Task&lt;BuildInformation&gt;" CoveredStatements="0" TotalStatements="182" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="182" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="161" CoveragePercent="0" />
+              <AnonymousMethod Name="(KeyValuePair&lt;string,List&lt;string&gt;&gt;):int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="():Task" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+                <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="():Task" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+                <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(KeyValuePair&lt;string,List&lt;ProjectPackageInfo&gt;&gt;):ProjectPackageInfoCollection" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(ProjectPackageInfo):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(ProjectPackageInfo):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+                <AnonymousMethod Name="(string):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </AnonymousMethod>
+              <AnonymousMethod Name="(ProjectPackageInfo):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="PackPlatform(ProjectPackageInfo,bool,string,RegexReplacer[],PackageKind[]):Task&lt;List&lt;AppPackageInfo&gt;&gt;" CoveredStatements="0" TotalStatements="138" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="138" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="136" CoveragePercent="0" />
+              <AnonymousMethod Name="(PackageDependency):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(byte):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="PublishCoverageToGist(IDevHosting,BuildInformation,HitCoverage):Task" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="19" CoveragePercent="0" />
+          </Method>
+          <Method Name="PublishCoveralls(IDevHosting,BuildInformation):Task" CoveredStatements="0" TotalStatements="82" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="82" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="81" CoveragePercent="0" />
+              <AnonymousMethod Name="(NameValueHeaderValue):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="PublishNuGet(List&lt;string&gt;,string):Task" CoveredStatements="0" TotalStatements="28" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="28" CoveragePercent="0" />
+          </Method>
+          <Method Name="PublishPackagesAndChangelog(string,BuildInformation,GitHubDevHostingConfiguration,IDevHosting,IDevHosting,ChangelogResult,bool):Task" CoveredStatements="0" TotalStatements="57" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="57" CoveragePercent="0" />
+          </Method>
+          <Method Name="Run(string[]):Task&lt;int&gt;" CoveredStatements="0" TotalStatements="143" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="143" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="58" CoveragePercent="0" />
+              <AnonymousMethod Name="(ILoggingBuilder):void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+              <AnonymousMethod Name="(CommandLineApplication):void" CoveredStatements="0" TotalStatements="13" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+                <AnonymousMethod Name="(CancellationToken):Task&lt;int&gt;" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+                  <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+                </AnonymousMethod>
+              </AnonymousMethod>
+              <AnonymousMethod Name="(CommandLineApplication):void" CoveredStatements="0" TotalStatements="12" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+                <AnonymousMethod Name="(CancellationToken):Task&lt;int&gt;" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+                  <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+                </AnonymousMethod>
+              </AnonymousMethod>
+              <AnonymousMethod Name="():int" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+              <LocalFunction Name="AddPublishOrBuildArgs(CommandLineApplication):void" CoveredStatements="0" TotalStatements="47" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="33" CoveragePercent="0" />
+                <AnonymousMethod Name="(CancellationToken):Task&lt;int&gt;" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+                  <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+                </AnonymousMethod>
+              </LocalFunction>
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="RunImpl(string,BuildKind,string,string,string,string,bool,bool,string):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="56" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="56" CoveragePercent="0" />
+          </Method>
+          <Method Name="RunMSBuild(string,string,IDictionary&lt;string,object&gt;,bool,bool,params string[]):Task&lt;List&lt;ITaskItem&gt;&gt;" CoveredStatements="0" TotalStatements="35" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="35" CoveragePercent="0" />
+          </Method>
+          <Method Name="RunTest(string,string):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="34" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="34" CoveragePercent="0" />
+          </Method>
+          <Method Name="Test(string):Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+          </Method>
+          <Method Name="UpdateHomebrewConfigurationFromPackage(ProjectPackageInfo):void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="UpdateScoopConfigurationFromPackage(ProjectPackageInfo):void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="Warn(string):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="ReleaseVersion" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+          <Constructor Name="ReleaseVersion(string,bool,string,string)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="TargetFrameworkInfo" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+          <Constructor Name="TargetFrameworkInfo(bool,List&lt;string&gt;,string)" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+      </Namespace>
+      <Namespace Name="Wcwidth" CoveredStatements="0" TotalStatements="246" CoveragePercent="0">
+        <Type Name="IntegerExtensions" CoveredStatements="0" TotalStatements="28" CoveragePercent="0">
+          <Method Name="Exist(uint[,],uint):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Find(uint[,],uint):int" CoveredStatements="0" TotalStatements="25" CoveragePercent="0" />
+        </Type>
+        <Type Name="UnicodeCalculator" CoveredStatements="0" TotalStatements="22" CoveragePercent="0">
+          <Constructor Name="UnicodeCalculator()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="GetWidth(int,Nullable&lt;Unicode&gt;):int" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+          <Method Name="GetWidth(Rune,Nullable&lt;Unicode&gt;):int" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="GetWidth(char,Nullable&lt;Unicode&gt;):int" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="WideTable" CoveredStatements="0" TotalStatements="98" CoveragePercent="0">
+          <Constructor Name="WideTable()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Method Name="GenerateTable(Unicode):uint[,]" CoveredStatements="0" TotalStatements="23" CoveragePercent="0" />
+          <Method Name="GetTable(Unicode):uint[,]" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+          <Method Name="Unicode_10_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_11_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_12_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_12_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_13_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_14_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_15_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_15_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_4_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_2_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_2_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_3_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_7_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_8_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_9_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="ZeroTable" CoveredStatements="0" TotalStatements="98" CoveragePercent="0">
+          <Constructor Name="ZeroTable()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Method Name="GenerateTable(Unicode):uint[,]" CoveredStatements="0" TotalStatements="23" CoveragePercent="0" />
+          <Method Name="GetTable(Unicode):uint[,]" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+          <Method Name="Unicode_10_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_11_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_12_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_12_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_13_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_14_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_15_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_15_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_4_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_5_2_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_1_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_2_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_6_3_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_7_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_8_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unicode_9_0_0():uint[,]" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+      </Namespace>
+    </Assembly>
+  </Project>
+  <Project Name="DotNetReleaser.Tests" CoveredStatements="348" TotalStatements="428" CoveragePercent="81">
+    <Assembly Name="(1.0.0.0, net9.0)" CoveredStatements="348" TotalStatements="428" CoveragePercent="81">
+      <Namespace Name="DotNetReleaser.Tests" CoveredStatements="348" TotalStatements="426" CoveragePercent="82">
+        <Type Name="AssertHelper" CoveredStatements="6" TotalStatements="15" CoveragePercent="40">
+          <Method Name="Equals(string,string):void" CoveredStatements="5" TotalStatements="14" CoveragePercent="36" />
+          <Method Name="NormalizeEndOfLines(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+        </Type>
+        <Type Name="BasicTests" CoveredStatements="148" TotalStatements="181" CoveragePercent="82">
+          <Constructor Name="BasicTests()" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+          <Method Name="CheckGitHub():Task" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          </Method>
+          <Method Name="CreateConfiguration():Task" CoveredStatements="4" TotalStatements="5" CoveragePercent="80">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="4" TotalStatements="5" CoveragePercent="80">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="EnsureTestsFolder():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          <Method Name="Normalize(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <Method Name="TestBuild():Task" CoveredStatements="28" TotalStatements="32" CoveragePercent="88">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="28" TotalStatements="32" CoveragePercent="88">
+              <OwnCoverage CoveredStatements="25" TotalStatements="28" CoveragePercent="89" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBuildService():Task" CoveredStatements="45" TotalStatements="58" CoveragePercent="78">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="45" TotalStatements="58" CoveragePercent="78">
+              <OwnCoverage CoveredStatements="44" TotalStatements="56" CoveragePercent="79" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestHomebrewNaming(string,string):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+          <Method Name="TestMacOSTarZipAreExecutable():Task" CoveredStatements="50" TotalStatements="59" CoveragePercent="85">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="50" TotalStatements="59" CoveragePercent="85">
+              <OwnCoverage CoveredStatements="47" TotalStatements="55" CoveragePercent="85" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+              <AnonymousMethod Name="(string):string" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestNew():Task" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+          </Method>
+        </Type>
+        <Type Name="ChangelogTests" CoveredStatements="139" TotalStatements="139" CoveragePercent="100">
+          <Method Name="AssertTemplate(string,MockDevHosting.GetChangesDelegate,Action&lt;ChangelogConfiguration&gt;):Task" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+          </Method>
+          <Method Name="CreateChangelog(MockDevHosting.GetChangesDelegate,Action&lt;ChangelogConfiguration&gt;):ValueTask&lt;ValueTuple&lt;MockSimpleLogger,ChangelogResult&gt;&gt;" CoveredStatements="11" TotalStatements="11" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="11" TotalStatements="11" CoveragePercent="100" />
+          </Method>
+          <Method Name="DefaultChangelogCollection(IDevHosting,string,string,string,string):ChangelogCollection" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+          <Method Name="GetBigChangesImpl(IDevHosting,string,string,string,string):ChangelogCollection" CoveredStatements="19" TotalStatements="19" CoveragePercent="100" />
+          <Method Name="GetBranchAndFilesDispatchChangesImpl(IDevHosting,string,string,string,string):ChangelogCollection" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+          <Method Name="TestBig():Task" CoveredStatements="3" TotalStatements="3" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          </Method>
+          <Method Name="TestBigWithoutCommits():Task" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBigWithoutCommitsAndExcludeContributor():Task" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBigWithoutCommitsAndExcludeLabels():Task" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBigWithoutCommitsAndIncludeContributors():Task" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBigWithoutCommitsAndIncludeLabels():Task" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBodyDispatch():Task" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBodyTemplateWithProperties():Task" CoveredStatements="9" TotalStatements="9" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="9" TotalStatements="9" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestBranchDispatch():Task" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestErrorRegex():Task" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestErrorRunningTemplate():Task" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestErrorTemplate():Task" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="8" TotalStatements="8" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+          <Method Name="TestFilesDispatch():Task" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+            <InternalCompiledMethod Name="MoveNext():void" CoveredStatements="6" TotalStatements="6" CoveragePercent="100">
+              <OwnCoverage CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+              <AnonymousMethod Name="(ChangelogConfiguration):void" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+            </InternalCompiledMethod>
+          </Method>
+        </Type>
+        <Type Name="CoverageTests" CoveredStatements="27" TotalStatements="27" CoveragePercent="100">
+          <Method Name="ParseEventJson():void" CoveredStatements="8" TotalStatements="8" CoveragePercent="100" />
+          <Method Name="TestConverterToCoveralls():void" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+          <Method Name="TestParser():void" CoveredStatements="12" TotalStatements="12" CoveragePercent="100" />
+        </Type>
+        <Type Name="MockDevHosting" CoveredStatements="16" TotalStatements="42" CoveragePercent="38">
+          <Constructor Name="MockDevHosting(ISimpleLogger,DevHostingConfiguration)" CoveredStatements="7" TotalStatements="7" CoveragePercent="100" />
+          <Constructor Name="MockDevHosting()" CoveredStatements="1" TotalStatements="1" CoveragePercent="100" />
+          <Method Name="Connect():Task&lt;bool&gt;" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="CreateOrUpdateGist(string,string,string):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="CreateOrUpdateRelease(string,string,ReleaseVersion,ChangelogResult):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="GetAllReleaseTags(string,string,string):Task&lt;List&lt;ReleaseVersion&gt;&gt;" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+          <Method Name="GetBranchNamesForCommit(string,string,string):Task&lt;List&lt;string&gt;&gt;" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="GetChanges(string,string,string,string):Task&lt;ChangelogCollection&gt;" CoveredStatements="3" TotalStatements="3" CoveragePercent="100" />
+          <Method Name="GetCompareUrl(string,string,string,string):string" CoveredStatements="5" TotalStatements="5" CoveragePercent="100" />
+          <Method Name="GetDownloadReleaseUrl(string,string):string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="UpdateChangelogAndUploadPackages(string,string,ReleaseVersion,ChangelogResult,List&lt;AppPackageInfo&gt;,bool,bool):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="UploadHomebrewFormula(string,string,ProjectPackageInfo,string):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="UploadScoopManifest(string,string,ProjectPackageInfo,string):Task" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="MockSimpleLogger" CoveredStatements="12" TotalStatements="22" CoveragePercent="55">
+          <Constructor Name="MockSimpleLogger()" CoveredStatements="4" TotalStatements="4" CoveragePercent="100" />
+          <Method Name="LogEndGroup():void" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+          <Method Name="LogSimple(LogLevel,Exception,string,bool,params object[]):void" CoveredStatements="8" TotalStatements="14" CoveragePercent="57" />
+          <Method Name="LogStartGroup(string):void" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+        </Type>
+      </Namespace>
+      <Type Name="AutoGeneratedProgram" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+        <Method Name="Main(string[]):void" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+      </Type>
+    </Assembly>
+  </Project>
+  <Project Name="MsBuildPipeLogger.Logger" CoveredStatements="0" TotalStatements="938" CoveragePercent="0">
+    <Assembly Name="(1.0.0.0, .NETStandard,Version=v2.0)" CoveredStatements="0" TotalStatements="938" CoveragePercent="0">
+      <Namespace Name="Microsoft.Build" CoveredStatements="0" TotalStatements="812" CoveragePercent="0">
+        <Namespace Name="Framework" CoveredStatements="0" TotalStatements="140" CoveragePercent="0">
+          <Namespace Name="Profiler" CoveredStatements="0" TotalStatements="116" CoveragePercent="0">
+            <Type Name="EvaluationIdProvider" CoveredStatements="0" TotalStatements="7" CoveragePercent="0">
+              <Constructor Name="EvaluationIdProvider()" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+              <Method Name="GetNextId():long" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            </Type>
+            <Type Name="EvaluationLocation" CoveredStatements="0" TotalStatements="73" CoveragePercent="0">
+              <Constructor Name="EvaluationLocation(long,Nullable&lt;long&gt;,EvaluationPass,string,string,Nullable&lt;int&gt;,string,string,EvaluationLocationKind)" CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+              <Constructor Name="EvaluationLocation(Nullable&lt;long&gt;,EvaluationPass,string,string,Nullable&lt;int&gt;,string,string,EvaluationLocationKind)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Constructor Name="EvaluationLocation(EvaluationPass,string,string,Nullable&lt;int&gt;,string,string,EvaluationLocationKind)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Constructor Name="EvaluationLocation()" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+              <Property Name="IsEvaluationPass:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+                <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Property>
+              <Method Name="CreateEmptyLocation():EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="CreateLocationForAggregatedGlob():EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="CreateLocationForCondition(Nullable&lt;long&gt;,EvaluationPass,string,string,Nullable&lt;int&gt;,string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="CreateLocationForGlob(Nullable&lt;long&gt;,EvaluationPass,string,string,Nullable&lt;int&gt;,string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="Equals(object):bool" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+              <Method Name="GetHashCode():int" CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+              <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="WithEvaluationPass(EvaluationPass,string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="WithFile(string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="WithFileLineAndCondition(string,Nullable&lt;int&gt;,string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="WithGlob(string):EvaluationLocation" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="WithParentId(Nullable&lt;long&gt;):EvaluationLocation" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            </Type>
+            <Type Name="ProfiledLocation" CoveredStatements="0" TotalStatements="22" CoveragePercent="0">
+              <Constructor Name="ProfiledLocation(TimeSpan,TimeSpan,int)" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+              <Method Name="Equals(object):bool" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+              <Method Name="GetHashCode():int" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+              <Method Name="ToString():string" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            </Type>
+            <Type Name="ProfilerResult" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+              <Constructor Name="ProfilerResult(IDictionary&lt;EvaluationLocation,ProfiledLocation&gt;)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+              <Method Name="Equals(object):bool" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+              <Method Name="GetHashCode():int" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+                <OwnCoverage CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+                <AnonymousMethod Name="(int,EvaluationLocation):int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              </Method>
+            </Type>
+          </Namespace>
+          <Type Name="ProjectEvaluationFinishedEventArgs" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="ProjectEvaluationFinishedEventArgs()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Constructor Name="ProjectEvaluationFinishedEventArgs(string,params object[])" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="ProjectEvaluationStartedEventArgs" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="ProjectEvaluationStartedEventArgs()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Constructor Name="ProjectEvaluationStartedEventArgs(string,params object[])" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="ProjectImportedEventArgs" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="ProjectImportedEventArgs()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Constructor Name="ProjectImportedEventArgs(int,int,string,params object[])" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+          <Type Name="TargetSkippedEventArgs" CoveredStatements="0" TotalStatements="6" CoveragePercent="0">
+            <Constructor Name="TargetSkippedEventArgs()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Constructor Name="TargetSkippedEventArgs(string,params object[])" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          </Type>
+        </Namespace>
+        <Namespace Name="Logging" CoveredStatements="0" TotalStatements="672" CoveragePercent="0">
+          <Type Name="BuildEventArgsWriter" CoveredStatements="0" TotalStatements="559" CoveragePercent="0">
+            <Constructor Name="BuildEventArgsWriter(BinaryWriter)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="GetBuildEventArgsFieldFlags(BuildEventArgs):BuildEventArgsFieldFlags" CoveredStatements="0" TotalStatements="28" CoveragePercent="0" />
+            <Method Name="GetMessageFlags(BuildMessageEventArgs,BuildEventArgsFieldFlags):BuildEventArgsFieldFlags" CoveredStatements="0" TotalStatements="35" CoveragePercent="0" />
+            <Method Name="Write(BuildEventArgs):void" CoveredStatements="0" TotalStatements="81" CoveragePercent="0" />
+            <Method Name="Write(BuildStartedEventArgs):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Write(BuildFinishedEventArgs):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Write(ProjectEvaluationStartedEventArgs):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Write(ProjectEvaluationFinishedEventArgs):void" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+            <Method Name="Write(ProjectStartedEventArgs):void" CoveredStatements="0" TotalStatements="26" CoveragePercent="0" />
+            <Method Name="Write(ProjectFinishedEventArgs):void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Method Name="Write(TargetStartedEventArgs):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="Write(TargetFinishedEventArgs):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="Write(TaskStartedEventArgs):void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <Method Name="Write(TaskFinishedEventArgs):void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+            <Method Name="Write(BuildErrorEventArgs):void" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+            <Method Name="Write(BuildWarningEventArgs):void" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+            <Method Name="Write(BuildMessageEventArgs):void" CoveredStatements="0" TotalStatements="20" CoveragePercent="0" />
+            <Method Name="Write(ProjectImportedEventArgs):void" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <Method Name="Write(TargetSkippedEventArgs):void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+            <Method Name="Write(CriticalBuildMessageEventArgs):void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="Write(TaskCommandLineEventArgs):void" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Method Name="Write(ITaskItem):void" CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+            <Method Name="Write(BuildEventContext):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="Write&lt;TKey,TValue&gt;(IEnumerable&lt;KeyValuePair&lt;TKey,TValue&gt;&gt;):void" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+            <Method Name="Write(BinaryLogRecordKind):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(int):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(long):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(byte[]):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(bool):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(string):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="Write(DateTime):void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+            <Method Name="Write(TimeSpan):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+            <Method Name="Write(EvaluationLocation):void" CoveredStatements="0" TotalStatements="19" CoveragePercent="0" />
+            <Method Name="Write(ProfiledLocation):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="Write7BitEncodedInt(BinaryWriter,int):void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="WriteBaseFields(BuildEventArgs,BuildEventArgsFieldFlags):void" CoveredStatements="0" TotalStatements="26" CoveragePercent="0" />
+            <Method Name="WriteBlob(BinaryLogRecordKind,byte[]):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="WriteBuildEventArgsFields(BuildEventArgs):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Method Name="WriteItemList(IEnumerable):void" CoveredStatements="0" TotalStatements="14" CoveragePercent="0" />
+            <Method Name="WriteItems(IEnumerable):void" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+              <AnonymousMethod Name="(DictionaryEntry):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="WriteMessageFields(BuildMessageEventArgs):void" CoveredStatements="0" TotalStatements="39" CoveragePercent="0" />
+            <Method Name="WriteOptionalString(string):void" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+            <Method Name="WriteProperties(IEnumerable):void" CoveredStatements="0" TotalStatements="23" CoveragePercent="0" />
+          </Type>
+          <Type Name="Reflector" CoveredStatements="0" TotalStatements="113" CoveragePercent="0">
+            <Method Name="GetBuildReasonFromTargetSkipped(BuildEventArgs):TargetBuiltReason" CoveredStatements="0" TotalStatements="14" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="13" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):TargetBuiltReason" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetBuildReasonFromTargetStarted(BuildEventArgs):TargetBuiltReason" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+            <Method Name="GetEvaluationId(BuildEventContext):int" CoveredStatements="0" TotalStatements="20" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventContext):int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventContext):int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetImportedProjectFile(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetParentTargetFromTargetSkipped(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetProjectFileFromEvaluationFinished(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetProjectFileFromEvaluationStarted(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetTargetFileFromTargetSkipped(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetTargetNameFromTargetSkipped(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="GetUnexpandedProject(BuildEventArgs):string" CoveredStatements="0" TotalStatements="10" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+              <AnonymousMethod Name="(BuildEventArgs):string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+          </Type>
+        </Namespace>
+      </Namespace>
+      <Namespace Name="MsBuildPipeLogger" CoveredStatements="0" TotalStatements="126" CoveragePercent="0">
+        <Type Name="AnonymousPipeWriter" CoveredStatements="0" TotalStatements="4" CoveragePercent="0">
+          <Constructor Name="AnonymousPipeWriter(string)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        </Type>
+        <Type Name="NamedPipeWriter" CoveredStatements="0" TotalStatements="13" CoveragePercent="0">
+          <Constructor Name="NamedPipeWriter(string)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Constructor Name="NamedPipeWriter(string,string)" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          <Method Name="InitializePipe(string,string):PipeStream" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+        </Type>
+        <Type Name="ParameterParser" CoveredStatements="0" TotalStatements="44" CoveragePercent="0">
+          <Method Name="GetPipeFromParameters(string):IPipeWriter" CoveredStatements="0" TotalStatements="26" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="25" CoveragePercent="0" />
+            <AnonymousMethod Name="(KeyValuePair&lt;ParameterType,string&gt;):bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+          <Method Name="ParseParameter(string):KeyValuePair&lt;ParameterType,string&gt;" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+          <Method Name="ParseParameters(string):KeyValuePair&lt;ParameterType,string&gt;[]" CoveredStatements="0" TotalStatements="8" CoveragePercent="0">
+            <OwnCoverage CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+            <AnonymousMethod Name="(string):KeyValuePair&lt;ParameterType,string&gt;" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Method>
+        </Type>
+        <Type Name="PipeLogger" CoveredStatements="0" TotalStatements="21" CoveragePercent="0">
+          <Method Name="Initialize(IEventSource):void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          <Method Name="InitializeEnvironmentVariables():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Method Name="InitializeEvents(IEventSource):void" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="InitializePipeWriter():IPipeWriter" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="Shutdown():void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+        </Type>
+        <Type Name="PipeWriter" CoveredStatements="0" TotalStatements="41" CoveragePercent="0">
+          <Constructor Name="PipeWriter(PipeStream)" CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+          <Constructor Name="PipeWriter()" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="Dispose():void" CoveredStatements="0" TotalStatements="17" CoveragePercent="0" />
+          <Method Name="TakeEventArgs():BuildEventArgs" CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+          <Method Name="Write(BuildEventArgs):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="TypeExtensions" CoveredStatements="0" TotalStatements="3" CoveragePercent="0">
+          <Method Name="GetField(Type,string):FieldInfo" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="GetGetMethod(PropertyInfo):MethodInfo" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="GetProperty(Type,string):PropertyInfo" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+      </Namespace>
+    </Assembly>
+  </Project>
+  <Project Name="MsBuildPipeLogger.Server" CoveredStatements="0" TotalStatements="234" CoveragePercent="0">
+    <Assembly Name="(1.0.0.0, .NETStandard,Version=v2.0)" CoveredStatements="0" TotalStatements="234" CoveragePercent="0">
+      <Namespace Name="MsBuildPipeLogger" CoveredStatements="0" TotalStatements="234" CoveragePercent="0">
+        <Type Name="AnonymousPipeLoggerServer" CoveredStatements="0" TotalStatements="15" CoveragePercent="0">
+          <Constructor Name="AnonymousPipeLoggerServer()" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Constructor Name="AnonymousPipeLoggerServer(CancellationToken)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Connect():void" CoveredStatements="0" TotalStatements="8" CoveragePercent="0" />
+          <Method Name="GetClientHandle():string" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="BuildEventArgsReaderProxy" CoveredStatements="0" TotalStatements="16" CoveragePercent="0">
+          <Constructor Name="BuildEventArgsReaderProxy(BinaryReader)" CoveredStatements="0" TotalStatements="15" CoveragePercent="0" />
+          <Method Name="Read():BuildEventArgs" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="CancellationTokenExtensions" CoveredStatements="0" TotalStatements="19" CoveragePercent="0">
+          <Method Name="Try&lt;TResult&gt;(CancellationToken,Func&lt;TResult&gt;,Func&lt;TResult&gt;):TResult" CoveredStatements="0" TotalStatements="19" CoveragePercent="0" />
+        </Type>
+        <Type Name="InterlockedBool" CoveredStatements="0" TotalStatements="17" CoveragePercent="0">
+          <Constructor Name="InterlockedBool()" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Constructor Name="InterlockedBool(bool)" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+          <Method Name="op_Implicit(InterlockedBool):bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Set():bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Method Name="Unset():bool" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+        </Type>
+        <Type Name="NamedPipeLoggerServer" CoveredStatements="0" TotalStatements="22" CoveragePercent="0">
+          <Constructor Name="NamedPipeLoggerServer(string)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Constructor Name="NamedPipeLoggerServer(string,CancellationToken)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+          <Method Name="CancelConnectionWait():void" CoveredStatements="0" TotalStatements="9" CoveragePercent="0" />
+          <Method Name="Connect():void" CoveredStatements="0" TotalStatements="4" CoveragePercent="0" />
+        </Type>
+        <Type Name="PipeBuffer" CoveredStatements="0" TotalStatements="101" CoveragePercent="0">
+          <Type Name="Buffer" CoveredStatements="0" TotalStatements="36" CoveragePercent="0">
+            <Constructor Name="Buffer()" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+            <Constructor Name="Buffer(byte[],int,int)" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+            <Method Name="FillFromStream(Stream,CancellationToken):int" CoveredStatements="0" TotalStatements="18" CoveragePercent="0">
+              <OwnCoverage CoveredStatements="0" TotalStatements="11" CoveragePercent="0" />
+              <AnonymousMethod Name="():int" CoveredStatements="0" TotalStatements="6" CoveragePercent="0" />
+              <AnonymousMethod Name="():int" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            </Method>
+            <Method Name="Read(byte[],int,int):int" CoveredStatements="0" TotalStatements="7" CoveragePercent="0" />
+          </Type>
+          <Constructor Name="PipeBuffer()" CoveredStatements="0" TotalStatements="2" CoveragePercent="0" />
+          <Property Name="CanRead:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Property Name="CanSeek:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Property Name="CanWrite:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Property Name="IsCompleted:bool" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Property Name="Length:long" CoveredStatements="0" TotalStatements="1" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Property Name="Position:long" CoveredStatements="0" TotalStatements="2" CoveragePercent="0">
+            <PropertyGetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+            <PropertySetter CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          </Property>
+          <Method Name="CompleteAdding():void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="FillFromStream(Stream,CancellationToken):bool" CoveredStatements="0" TotalStatements="12" CoveragePercent="0" />
+          <Method Name="Flush():void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="Read(byte[],int,int):int" CoveredStatements="0" TotalStatements="21" CoveragePercent="0" />
+          <Method Name="Seek(long,SeekOrigin):long" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="SetLength(long):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+          <Method Name="TakeBuffer():bool" CoveredStatements="0" TotalStatements="18" CoveragePercent="0" />
+          <Method Name="Write(byte[],int,int):void" CoveredStatements="0" TotalStatements="1" CoveragePercent="0" />
+        </Type>
+        <Type Name="PipeLoggerServer&lt;TPipeStream&gt;" CoveredStatements="0" TotalStatements="44" CoveragePercent="0">
+          <Constructor Name="PipeLoggerServer(TPipeStream)" CoveredStatements="0" TotalStatements="3" CoveragePercent="0" />
+          <Constructor Name="PipeLoggerServer(TPipeStream,CancellationToken)" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+          <Method Name="Dispose():void" CoveredStatements="0" TotalStatements="5" CoveragePercent="0" />
+          <Method Name="Read():BuildEventArgs" CoveredStatements="0" TotalStatements="16" CoveragePercent="0" />
+          <Method Name="ReadAll():void" CoveredStatements="0" TotalStatements="10" CoveragePercent="0" />
+        </Type>
+      </Namespace>
+    </Assembly>
+  </Project>
+</SolutionRoot>

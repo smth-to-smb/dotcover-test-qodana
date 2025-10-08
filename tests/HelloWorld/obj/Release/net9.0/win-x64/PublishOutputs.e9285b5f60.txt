@@ -1,0 +1,1 @@
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/win-x64/publish/HelloWorld.exe

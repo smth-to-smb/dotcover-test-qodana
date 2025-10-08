@@ -1,0 +1,130 @@
+﻿<Project>
+  <ItemGroup>
+    <DebDependency Condition="'$(DotNetReleaserDebDependencies)' != ''" Include="$(DotNetReleaserDebDependencies.Split(';'))"></DebDependency>
+    <RpmDependency Condition="'$(DotNetReleaserRpmDependencies)' != ''" Include="$(DotNetReleaserRpmDependencies.Split(';'))"></RpmDependency>
+  </ItemGroup>
+
+  <!--Handle Central package version-->
+  <Choose>
+    <When Condition="'$(ManagePackageVersionsCentrally)' == 'true' AND '$(CentralPackageVersionsFileImported)' == 'true'">
+      <ItemGroup>
+        <PackageReference Include="Packaging.Targets" VersionOverride="0.1.220">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>compile;build</IncludeAssets>
+          <ExcludeAssets>runtime;contentFiles;native</ExcludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Include="Packaging.Targets" Version="0.1.220">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>compile;build</IncludeAssets>
+          <ExcludeAssets>runtime;contentFiles;native</ExcludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <Choose>
+    <When Condition="'$(ManagePackageVersionsCentrally)' == 'true' AND '$(CentralPackageVersionsFileImported)' == 'true' AND '$(DotNetReleaserCoverage)' == 'true' AND '$(IsTestProject)' == 'true'">
+      <ItemGroup>
+        <PackageReference Include="$(DotNetReleaserCoveragePackage)" VersionOverride="$(DotNetReleaserCoverageVersion)">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(DotNetReleaserCoverage)' == 'true' AND '$(IsTestProject)' == 'true'">
+      <ItemGroup>
+        <PackageReference Include="$(DotNetReleaserCoveragePackage)" Version="$(DotNetReleaserCoverageVersion)">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <Choose>
+    <When Condition="'$(ManagePackageVersionsCentrally)' == 'true' AND '$(CentralPackageVersionsFileImported)' == 'true' AND '$(IsTestProject)' == 'true'">
+      <ItemGroup>
+        <PackageReference Include="GitHubActionsTestLogger" VersionOverride="2.4.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsTestProject)' == 'true'">
+      <ItemGroup>
+        <PackageReference Include="GitHubActionsTestLogger" Version="2.4.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <!--<Target Name="CreateSetup" AfterTargets="Publish">
+    <PropertyGroup>
+      <PublishDirFullPath>$([System.IO.Path]::GetFullPath('$(PublishDir)'))</PublishDirFullPath>
+      <PublishSetupName>$(AssemblyName).$(PackageVersion).$(RuntimeIdentifier).setup</PublishSetupName>
+      <PublishPackagePath>$([System.IO.Path]::GetFullPath('$(PublishDirFullPath)..\'))</PublishPackagePath>
+    </PropertyGroup>
+    <Exec Command="iscc.exe /DMyAppVersion=$(PackageVersion) /DMyAppSource=&quot;$(PublishDirFullPath)*&quot; /O&quot;$(PublishPackagePath)&quot; /F$(PublishSetupName) kalk-setup.iss" WorkingDirectory="$(MSBuildThisFileDirectory)" />
+  </Target>-->
+
+  <ItemGroup>
+    <Content Condition="'$(DotNetReleaserSystemdFile)' != ''" Include="$(DotNetReleaserSystemdFile)" CopyToPublishDirectory="PreserveNewest" LinuxFileMode="1755">
+      <LinuxPath>/etc/systemd/system/$(AssemblyName).service</LinuxPath>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="DotNetReleaserGetTargetFramework" Outputs="@(_DotNetReleaserGetTargetFramework)">
+    <ItemGroup>
+      <_DotNetReleaserGetTargetFramework Include="$(MSBuildProjectFile)">
+        <TargetFramework>$(TargetFramework)</TargetFramework>
+        <TargetFrameworks>$(TargetFrameworks)</TargetFrameworks>
+      </_DotNetReleaserGetTargetFramework>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="DotNetReleaserGetPackageInfo"  DependsOnTargets="GetAssemblyVersion" Outputs="@(_DotNetReleaserGetPackageInfo)">
+    <ItemGroup>
+      <_DotNetReleaserGetPackageInfo Include="$(PackageId)" Kind="PackageId"/>
+      <_DotNetReleaserGetPackageInfo Include="$(AssemblyName)" Kind="AssemblyName"/>
+      <_DotNetReleaserGetPackageInfo Include="$(PackageDescription)" Kind="PackageDescription"/>
+      <_DotNetReleaserGetPackageInfo Include="$(PackageVersion)" Kind="PackageVersion"/>
+      <_DotNetReleaserGetPackageInfo Include="$(PackageLicenseExpression)" Kind="PackageLicenseExpression"/>
+      <_DotNetReleaserGetPackageInfo Include="$(OutputType)" Kind="PackageOutputType"/>
+      <_DotNetReleaserGetPackageInfo Include="$(PackageProjectUrl)" Kind="PackageProjectUrl"/>
+      <_DotNetReleaserGetPackageInfo Include="$(IsPackable)" Kind="IsNuGetPackable"/>
+      <_DotNetReleaserGetPackageInfo Include="$(IsTestProject)" Kind="IsTestProject"/>
+      <_DotNetReleaserGetPackageInfo Include="@(ProjectReference)" Kind="ProjectReference"/>
+      <_DotNetReleaserGetPackageInfo Include="$([System.IO.Path]::GetFullPath('$(PublishDir)'))" Kind="PublishDir"/>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="DotNetReleaserPackAndGetNuGetPackOutput" Outputs="@(NuGetPackOutput)" DependsOnTargets="Pack">
+  </Target>
+
+  <Target Name="DotNetReleaserPublishAndCreateDeb" Outputs="@(_DotNetReleaserPublishAndCreateDeb)" DependsOnTargets="CreateDeb">
+    <ItemGroup>
+      <_DotNetReleaserPublishAndCreateDeb Include="$(DebPath)" Kind="DebPath"/>
+    </ItemGroup>
+  </Target>
+  <Target Name="DotNetReleaserPublishAndCreateRpm" Outputs="@(_DotNetReleaserPublishAndCreateRpm)" DependsOnTargets="CreateRpm">
+    <ItemGroup>
+      <_DotNetReleaserPublishAndCreateRpm Include="$(RpmPath)" Kind="RpmPath"/>
+    </ItemGroup>
+  </Target>
+  <Target Name="DotNetReleaserPublishAndCreateZip" Outputs="@(_DotNetReleaserPublishAndCreateZip)" DependsOnTargets="Publish">
+    <ItemGroup>
+      <_DotNetReleaserPublishAndCreateZip Include="$(PublishDir)" Kind="PublishDir"/>
+    </ItemGroup>
+  </Target>
+  <Target Name="DotNetReleaserPublishAndCreateTar" Outputs="@(_DotNetReleaserPublishAndCreateTar)" DependsOnTargets="Publish">
+    <ItemGroup>
+      <_DotNetReleaserPublishAndCreateTar Include="$(PublishDir)" Kind="PublishDir"/>
+    </ItemGroup>
+  </Target>
+</Project>

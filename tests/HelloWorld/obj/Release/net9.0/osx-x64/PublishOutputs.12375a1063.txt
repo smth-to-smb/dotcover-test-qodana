@@ -1,0 +1,4 @@
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/osx-x64/publish/HelloWorld
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/osx-x64/publish/HelloWorld.runtimeconfig.json
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/osx-x64/publish/HelloWorld.dll
+/home/Anton.Samarin/Desktop/dotnet/dotnet-releaser/dotnet-releaser/tests/HelloWorld/bin/Release/net9.0/osx-x64/publish/HelloWorld.deps.json

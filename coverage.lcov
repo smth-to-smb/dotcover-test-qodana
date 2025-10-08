@@ -1,0 +1,35 @@
+# LCOV coverage report for dotnet-releaser
+# Generated from dotCover XML report
+
+# Example for DotNetReleaser.Changelog.ChangelogBuilder
+SF:DotNetReleaser/Changelog/ChangelogBuilder.cs
+FN:5,DotNetReleaser.Changelog.ChangelogBuilder::.ctor
+FNDA:5,DotNetReleaser.Changelog.ChangelogBuilder::.ctor
+FN:9,DotNetReleaser.Changelog.ChangelogBuilder::Generate
+FNDA:1,DotNetReleaser.Changelog.ChangelogBuilder::Generate
+FN:15,DotNetReleaser.Changelog.ChangelogBuilder::GenerateFromExistingChangelog
+FNDA:0,DotNetReleaser.Changelog.ChangelogBuilder::GenerateFromExistingChangelog
+FN:22,DotNetReleaser.Changelog.ChangelogBuilder::GenerateFromPullRequestsAndCommits
+FNDA:1,DotNetReleaser.Changelog.ChangelogBuilder::GenerateFromPullRequestsAndCommits
+end_of_record
+
+# Example for DotNetReleaser.Changelog.ChangelogTemplatizer
+SF:DotNetReleaser/Changelog/ChangelogTemplatizer.cs
+FN:4,DotNetReleaser.Changelog.ChangelogTemplatizer::.ctor
+FNDA:1,DotNetReleaser.Changelog.ChangelogTemplatizer::.ctor
+FN:8,DotNetReleaser.Changelog.ChangelogTemplatizer::CompileScribanTemplate
+FNDA:1,DotNetReleaser.Changelog.ChangelogTemplatizer::CompileScribanTemplate
+FN:12,DotNetReleaser.Changelog.ChangelogTemplatizer::DispatchPullRequestAndCommitChangesToCategories
+FNDA:1,DotNetReleaser.Changelog.ChangelogTemplatizer::DispatchPullRequestAndCommitChangesToCategories
+end_of_record
+
+# Example for DotNetReleaser.Tests.BasicTests
+SF:DotNetReleaser.Tests/BasicTests.cs
+FN:5,DotNetReleaser.Tests.BasicTests::TestBuild
+FNDA:1,DotNetReleaser.Tests.BasicTests::TestBuild
+FN:12,DotNetReleaser.Tests.BasicTests::TestBuildService
+FNDA:1,DotNetReleaser.Tests.BasicTests::TestBuildService
+FN:19,DotNetReleaser.Tests.BasicTests::TestHomebrewNaming
+FNDA:1,DotNetReleaser.Tests.BasicTests::TestHomebrewNaming
+end_of_record
+
